@@ -1,6 +1,7 @@
 import ItineraryFilter from "@/src/components/itinerary-filter";
 import ItineraryTable from "@/src/components/itinerary-table";
 import UserSection from "@/src/components/user-section";
+import { itineraries } from "@/src/utilities/api";
 import { poppins } from "@/src/utilities/fonts";
 
 const ItinerariesPage: React.FC = () => {
@@ -12,7 +13,7 @@ const ItinerariesPage: React.FC = () => {
                     <UserSection />
                 </section>
                 <ItineraryFilter />
-                <ItineraryTable />
+                <ItineraryTable itineraries={itineraries}/>
             </div>
         </main>
     );

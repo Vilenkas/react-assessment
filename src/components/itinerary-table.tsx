@@ -3,8 +3,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { poppinsLight } from '../utilities/fonts';
+import { Itinerary } from '../utilities/api';
 
-const ItineraryTable: React.FC = () => {
+const ItineraryTable: React.FC<{ itineraries: Itinerary[] }> = ({ itineraries }) => {
     return (
         <div className='flex flex-col gap-2 mt-20'>
             <div className={`grid grid-cols-5 px-8 py-3 text-gray-500 bg-gray-50 rounded ${poppinsLight.className}`}>
@@ -13,43 +14,13 @@ const ItineraryTable: React.FC = () => {
                 <div className='text-start col-start-3 col-end-5'>Agent</div>
                 <div className='text-start'>Agent rating</div>
             </div>
-            {[
-                {
-                    "id": "it_1",
-                    "legs": [
-                        "leg_1",
-                        "leg_4"
-                    ],
-                    "price": "£35",
-                    "agent": "Wizzair.com",
-                    "agent_rating": 9.1
-                },
-                {
-                    "id": "it_2",
-                    "legs": [
-                        "leg_2",
-                        "leg_5"
-                    ],
-                    "price": "£115",
-                    "agent": "British Airways",
-                    "agent_rating": 9.3
-                },
-                {
-                    "id": "it_3",
-                    "legs": [
-                        "leg_3",
-                        "leg_6"
-                    ],
-                    "price": "£90",
-                    "agent": "Lufthansa",
-                    "agent_rating": 8.9
-                },
-            ].map((item, index) => (
+            {itineraries.map((item, index) => (
                 <Link href={`/itineraries/${item.id}`} key={index}>
                     <div className={`grid grid-cols-5 px-8 py-4 rounded hover:text-[#3f725a] hover:bg-[#ccffe7] hover:border-[#3f725a] border-2 cursor-pointer shadow ${poppinsLight.className}`}>
                         <div className={`text-start ${poppinsLight.className}`}>{item.id}</div>
                         <div className={`text-start ${poppinsLight.className}`}>£{item.price}</div>
                         <div className={`text-start flex items-center justify-start gap-4 col-start-3 col-end-5 ${poppinsLight.className}`}>
+                            <Image width={20} src={item.logo} alt='logo' />
                             <span>{item.agent}</span>
                         </div>
                         <div className={`text-start ${poppinsLight.className}`}>{item.agent_rating}</div>
