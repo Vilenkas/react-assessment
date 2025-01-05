@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import auxo from '@/public/logos/auxo.svg';
+import { poppins } from '../utilities/fonts';
 
 const HomePage: React.FC = () => {
     return (
@@ -8,7 +9,7 @@ const HomePage: React.FC = () => {
             <div>
                 <Image width={400} src={auxo} alt='logo' />
             </div>
-            <Link href='/itineraries' className='bg-[#ddf0f2] hover:bg-[#bce1e5] text-[#2acbd8] hover:text-[#1ab2c0] text-center font-semibold py-2 px-4 rounded w-40 shadow-md'>
+            <Link href='/itineraries' className={`bg-[#ddf0f2] hover:bg-[#bce1e5] text-[#2acbd8] hover:text-[#1ab2c0] text-center font-semibold py-2 px-4 rounded w-40 shadow-md ${poppins.className}`}>
                 Start
             </Link>
         </div>
