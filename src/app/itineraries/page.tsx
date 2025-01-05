@@ -1,3 +1,4 @@
+import ItineraryFilter from "@/src/components/itinerary-filter";
 import UserSection from "@/src/components/user-section";
 import { poppins } from "@/src/utilities/fonts";
 
@@ -9,6 +10,7 @@ const ItinerariesPage: React.FC = () => {
                     <h1 className={`text-xl ${poppins.className}`}>Welcome,</h1>
                     <UserSection />
                 </section>
+                <ItineraryFilter />
             </div>
         </main>
     );

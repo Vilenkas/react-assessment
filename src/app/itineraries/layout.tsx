@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import auxo from '@/public/logos/auxo.svg';
 import ItineraryButton from '@/src/components/itinerary-button';
 import LogoutButton from '@/src/components/logout-button';
-import { raleway } from '@/src/utilities/fonts';
+import { poppins } from '@/src/utilities/fonts';
 
 export const metadata: Metadata = {
     title: 'Auxo - Dashboard',
@@ -15,7 +15,7 @@ const ItinerariesLayout: React.FC<{ children: React.ReactNode }> = ({ children }
     return (
         <div className='flex'>
             <aside>
-                <div className={`flex flex-col items-center justify-between px-5 pb-8 w-64 border-e-2 border-e-gray-200 h-screen ${raleway.className}`}>
+                <div className={`flex flex-col items-center justify-between px-5 pb-8 w-64 border-e-2 border-e-gray-200 h-screen ${poppins.className}`}>
                     <section className='flex flex-col items-center'>
                         <div className='my-10'>
                             <Link href='/'>
@@ -26,7 +26,7 @@ const ItinerariesLayout: React.FC<{ children: React.ReactNode }> = ({ children }
                             <ItineraryButton />
                         </nav>
                     </section>
-                    <section className={`flex flex-col items-center pt-5 border-t-2 border-t-green-300 ${raleway.className}`}>
+                    <section className={`flex flex-col items-center pt-5 border-t-2 border-t-green-300 ${poppins.className}`}>
                         <LogoutButton />
                     </section>
                 </div>
