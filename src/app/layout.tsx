@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import './globals.css';
 
 export const metadata: Metadata = {
-    title: "Auxo",
+    title: "Auxo - Home",
     description: "Auxo Platform",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const RootLayout: React.FC<{ children: React.ReactNode }> = ({
+    children,
+}: Readonly<{
+    children: React.ReactNode;
+}>) => {
     return (
         <html lang="en">
             <body>
@@ -15,3 +19,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </html>
     );
 }
+
+export default RootLayout;
