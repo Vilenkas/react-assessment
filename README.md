@@ -29,10 +29,10 @@ This project is a frontend implementation of a flight booking platform built wit
 
 ## Project Structure
 
-public/ # Static assets
-src/app/ # Next.js app router
-src/components/ # Reusable components
-src/utilities/ # Utility functions and types
+- public/ # Static assets
+- src/app/ # Next.js app router
+- src/components/ # Reusable components
+- src/utilities/ # Utility functions and types
 
 ## Potential Improvements
 
