@@ -7,7 +7,7 @@ import { Itinerary } from '../utilities/api';
 
 const ItineraryTable: React.FC<{ itineraries: Itinerary[] }> = ({ itineraries }) => {
     return (
-        <div className='flex flex-col gap-2 mt-20'>
+        <div className='flex flex-col gap-2'>
             <div className={`grid grid-cols-5 px-8 py-3 text-gray-500 bg-gray-50 rounded ${poppinsLight.className}`}>
                 <div className='text-start'>Itinerary</div>
                 <div className='text-start'>Price</div>

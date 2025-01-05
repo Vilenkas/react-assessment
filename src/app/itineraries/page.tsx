@@ -1,8 +1,8 @@
-import ItineraryFilter from "@/src/components/itinerary-filter";
-import ItineraryTable from "@/src/components/itinerary-table";
-import UserSection from "@/src/components/user-section";
-import { itineraries } from "@/src/utilities/api";
-import { poppins } from "@/src/utilities/fonts";
+import { poppins } from '@/src/utilities/fonts';
+import ItineraryControl from '@/src/components/itinerary-control';
+import { itineraries } from '@/src/utilities/api';
+import React from 'react';
+import UserSection from '@/src/components/user-section';
 
 const ItinerariesPage: React.FC = () => {
     return (
@@ -12,8 +12,7 @@ const ItinerariesPage: React.FC = () => {
                     <h1 className={`text-xl ${poppins.className}`}>Welcome,</h1>
                     <UserSection />
                 </section>
-                <ItineraryFilter />
-                <ItineraryTable itineraries={itineraries}/>
+                <ItineraryControl itineraries={itineraries} />
             </div>
         </main>
     );
